@@ -1,0 +1,18 @@
+/* Correcting the calc() issue by ensuring consistent units and simplifying calculations */
+
+/* Instead of width: calc(100% - 10%); use either pixels or percentages consistently */
+.container {
+  width: calc(100% - 10px); /* Consistent pixels */
+  /* OR */
+  /* width: 90%; /* Consistent percentage*/
+}
+
+/* Avoid overly complex expressions */
+.element {
+  width: calc(50% - 20px);
+  /*Better to break the calculation into simpler parts if needed*/
+  /* Instead of width: calc( (100% - 50px) / 2 + 10px);*/
+  width: calc(50% - 20px);
+  margin-left: calc(25% - 10px);
+}
+/*Ensure that calculations are valid and will not result in negative values*/
